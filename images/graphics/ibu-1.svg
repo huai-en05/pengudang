@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <defs><filter id="r"><feTurbulence baseFrequency="0.04" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter></defs>
+  <circle cx="120" cy="120" r="116" fill="#f3dfb2" filter="url(#r)"/>
+  <!-- steam -->
+  <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"><path d="M60 160 q-8 -12 0 -24 t0 -24"/><path d="M40 164 q-8 -12 0 -24 t0 -22"/></g>
+  <!-- baju kurung -->
+  <path filter="url(#r)" fill="#366baa" d="M58 236 C60 176 84 150 120 150 C156 150 180 176 182 236 Z"/>
+  <!-- hijab -->
+  <path filter="url(#r)" fill="#e0837a" d="M120 46 C88 46 72 72 74 100 C76 128 84 150 96 166 L144 166 C156 150 164 128 166 100 C168 72 152 46 120 46 Z"/>
+  <path filter="url(#r)" fill="#e0837a" d="M92 150 C96 176 144 176 148 150 L160 182 C140 196 100 196 80 182 Z"/>
+  <!-- face -->
+  <ellipse filter="url(#r)" cx="120" cy="104" rx="30" ry="35" fill="#c48a5e"/>
+  <g fill="none" stroke="#1d2a3d" stroke-width="2.6" stroke-linecap="round">
+    <path d="M104 100 q6 -6 12 0"/><path d="M124 100 q6 -6 12 0"/><path d="M110 120 q10 9 20 0"/>
+  </g>
+  <circle cx="103" cy="114" r="5" fill="#e0837a" opacity=".55"/><circle cx="137" cy="114" r="5" fill="#e0837a" opacity=".55"/>
+  <!-- wok + spatula -->
+  <path d="M130 200 L186 146" stroke="#8a5a32" stroke-width="6" stroke-linecap="round"/>
+  <path filter="url(#r)" fill="#1d2a3d" d="M30 182 H150 C146 210 120 222 90 222 C60 222 34 210 30 182 Z"/>
+  <path d="M150 188 h18" stroke="#1d2a3d" stroke-width="6" stroke-linecap="round"/>
+  <g fill="#7fa04d"><circle cx="66" cy="182" r="7"/><circle cx="96" cy="180" r="6"/></g>
+  <g fill="#f2c14e"><circle cx="80" cy="183" r="5"/><circle cx="114" cy="182" r="6"/></g>
+  <path d="M124 182 l10 -6" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+</svg>

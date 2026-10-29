@@ -12,9 +12,9 @@
 <body data-page="home">
 <header id="nav"></header>
 <main>
-  <section class="section section--pink hero">
+  <section class="section section--cream hero">
     <h1 class="hero__title" data-i18n-html="home.title">From Pengudang,<br>With love</h1>
-    <div class="deco deco--fish" aria-hidden="true"></div>
+    <img class="band" src="images/graphics/fish-band.svg" alt="" aria-hidden="true">
   </section>
 
   <section class="section section--blue welcome">
@@ -22,10 +22,12 @@
       <h2 class="script-title" data-i18n="home.welcome">Welcome to Pengudang!</h2>
       <p data-i18n="home.intro"></p>
     </div>
-    <div class="deco deco--village" aria-hidden="true"></div>
+    <img class="band" src="images/graphics/village-band.svg" alt="" aria-hidden="true">
   </section>
 
   <section class="section section--pink">
+    <img class="illus illus--tl" src="images/graphics/boat.svg" alt="" aria-hidden="true">
+    <img class="illus illus--tr" src="images/graphics/food.svg" alt="" aria-hidden="true">
     <div class="wrap">
       <h2 class="script-title script-title--md" data-i18n="home.classesTitle">Cook with us!</h2>
       <p class="subtitle" data-i18n="home.classesSub"></p>
@@ -34,25 +36,30 @@
     </div>
   </section>
 
-  <section class="section section--pink" style="padding-top:20px">
+  <section class="section section--cream">
+    <img class="illus illus--br" src="images/graphics/house.svg" alt="" aria-hidden="true">
     <div class="wrap">
       <h2 class="script-title script-title--md" data-i18n="home.ibus">Meet our Ibus!</h2>
       <div id="ibus"></div>
     </div>
   </section>
 
-  <section class="section section--blue">
+  <section class="section section--navy">
+    <img class="illus illus--tr" src="images/graphics/fishes.svg" alt="" aria-hidden="true">
     <div class="wrap">
       <h2 class="script-title" data-i18n="home.reviews">Hear from our past visitors!</h2>
       <div id="reviews"></div>
     </div>
   </section>
 
-  <section class="section section--pink" id="book">
+  <section class="section section--rose cta">
+    <img class="illus illus--bl" src="images/graphics/food.svg" alt="" aria-hidden="true">
+    <img class="illus illus--tr" src="images/graphics/ibu-1.svg" alt="" aria-hidden="true">
     <div class="wrap">
-      <h2 class="script-title" data-i18n="home.interested">Interested?</h2>
-      <p class="subtitle" data-i18n="home.signup">Sign up for a session now!</p>
-      <div data-booking></div>
+      <h2 class="script-title script-title--md" data-i18n="home.ctaTitle">Ready to cook with us?</h2>
+      <p class="subtitle" data-i18n="home.ctaText"></p>
+      <p class="center"><a class="btn btn--solid btn--lg" href="classes.html" data-i18n="home.ctaBtn">Browse classes</a></p>
+      <p class="center cta__q"><span data-i18n="home.ctaQ">Questions first?</span> <a href="contact.html" data-i18n="home.ctaContact">Contact us</a></p>
     </div>
   </section>
 </main>

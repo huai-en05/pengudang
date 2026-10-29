@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220">
+  <defs><filter id="r"><feTurbulence baseFrequency="0.04" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter></defs>
+  <g fill="none" stroke="#5b8dc7" stroke-width="4" stroke-linecap="round"><path d="M0 206 q16 -10 32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0"/></g>
+  <!-- palm -->
+  <path d="M214 204 C212 150 218 110 206 60" stroke="#8a5a32" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <g filter="url(#r)" fill="#4e6e2c"><path d="M206 60 C180 40 150 52 140 70 C168 58 190 60 206 60Z"/><path d="M206 60 C230 36 254 46 258 66 C238 54 222 56 206 60Z"/><path d="M206 60 C196 30 214 14 230 18 C214 30 210 44 206 60Z"/><path d="M206 60 C186 70 174 96 178 110 C188 90 198 74 206 60Z"/></g>
+  <!-- stilts -->
+  <g stroke="#8a5a32" stroke-width="6"><path d="M40 150 V204 M80 150 V204 M120 150 V204 M160 150 V204"/></g>
+  <!-- house -->
+  <rect filter="url(#r)" x="28" y="90" width="144" height="62" fill="#e9c46a"/>
+  <path filter="url(#r)" fill="#c0503f" d="M14 94 L100 34 L186 94 Z"/>
+  <rect x="44" y="104" width="32" height="26" fill="#366baa"/><path d="M60 104 v26" stroke="#e9c46a" stroke-width="3"/>
+  <rect x="112" y="104" width="28" height="48" fill="#8a5a32"/>
+  <path d="M20 152 H180" stroke="#8a5a32" stroke-width="6" stroke-linecap="round"/>
+  <g stroke="#8a5a32" stroke-width="4" stroke-linecap="round"><path d="M136 152 L150 204 M152 152 L166 204"/><path d="M140 166 h14 M144 180 h14 M148 194 h14" stroke-width="3"/></g>
+  <circle cx="100" cy="70" r="7" fill="#f9e6ea"/>
+</svg>

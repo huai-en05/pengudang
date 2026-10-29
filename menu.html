@@ -12,14 +12,22 @@
 <body data-page="menu" data-title-key="nav.menu">
 <header id="nav"></header>
 <main>
-  <section class="section section--pink" id="menu-section">
-    <div class="wrap">
-      <h1 class="script-title" data-i18n="menu.title">Our Menu</h1>
-      <p class="subtitle" data-i18n="menu.sub"></p>
-      <div id="menu-list"></div>
-    </div>
-  </section>
-  <section class="section section--pink dish-detail" id="dish-detail" aria-live="polite"></section>
+  <div id="menu-section">
+    <section class="section section--cream menu-intro" id="menu">
+      <img class="illus illus--tl" src="images/graphics/food.svg" alt="" aria-hidden="true">
+      <img class="illus illus--tr" src="images/graphics/ibu-2.svg" alt="" aria-hidden="true">
+      <div class="wrap">
+        <h1 class="script-title" data-i18n="menu.title">Our Menu</h1>
+        <p class="subtitle" data-i18n="menu.sub"></p>
+      </div>
+      <div class="photo-strip" id="menu-strip"></div>
+    </section>
+    <div id="menu-list"></div>
+    <section class="section section--cream band-only">
+      <img class="band" src="images/graphics/fish-band.svg" alt="" aria-hidden="true">
+    </section>
+  </div>
+  <section class="section section--cream dish-detail" id="dish-detail" aria-live="polite"></section>
 </main>
 <footer id="footer"></footer>
 <script src="js/i18n.js"></script>

@@ -12,24 +12,29 @@
 <body data-page="classes" data-title-key="nav.classes">
 <header id="nav"></header>
 <main>
-  <section class="section section--pink">
-    <div class="deco deco--fish deco--fish-right" aria-hidden="true"></div>
+  <section class="section section--cream page-head">
+    <img class="illus illus--tl" src="images/graphics/ibu-1.svg" alt="" aria-hidden="true">
+    <img class="illus illus--tr" src="images/graphics/fishes.svg" alt="" aria-hidden="true">
     <div class="wrap">
       <h1 class="script-title" data-i18n="classes.title">Our Cooking Classes</h1>
       <p class="subtitle" data-i18n="classes.sub"></p>
-      <div class="class-grid" id="class-list"></div>
-      <h2 class="script-title script-title--md" style="font-size:clamp(46px,5vw,70px)" data-i18n="classes.includes">Every class includes</h2>
+      <p class="eyebrow eyebrow--center" data-i18n="classes.includes">Every class includes</p>
       <ul class="includes">
-        <li data-i18n="classes.inc1"></li><li data-i18n="classes.inc2"></li>
-        <li data-i18n="classes.inc3"></li><li data-i18n="classes.inc4"></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16l-1.5 10.5a1 1 0 0 1-1 .5h-11a1 1 0 0 1-1-.5z"/><path d="M8 9l3-5M16 9l-3-5"/></svg><span data-i18n="classes.inc1"></span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg><span data-i18n="classes.inc2"></span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="7"/><circle cx="12" cy="13" r="3.5"/><path d="M3 4v6M5 4v6M3 7h2M4 10v10M20 4c-1.5 1-2 3-2 5s1 2 2 2v9"/></svg><span data-i18n="classes.inc3"></span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v5l3 3H6l3-3z"/><path d="M5 14h14v3H5zM7 20h10"/></svg><span data-i18n="classes.inc4"></span></li>
       </ul>
     </div>
   </section>
-  <section class="section section--pink" id="book" style="padding-top:20px">
+  <section class="section section--pink">
     <div class="wrap">
-      <h2 class="script-title" data-i18n="home.interested">Interested?</h2>
-      <p class="subtitle" data-i18n="home.signup">Sign up for a session now!</p>
-      <div data-booking></div>
+      <div class="class-grid" id="class-list"></div>
+    </div>
+  </section>
+  <section class="section section--sky cta cta--slim">
+    <div class="wrap">
+      <p class="center cta__q"><span data-i18n="home.ctaQ">Questions first?</span> <a href="contact.html" data-i18n="home.ctaContact">Contact us</a></p>
     </div>
   </section>
 </main>

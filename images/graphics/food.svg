@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 200">
+  <defs><filter id="r"><feTurbulence baseFrequency="0.04" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter></defs>
+  <!-- banana leaf -->
+  <path filter="url(#r)" fill="#7fa04d" d="M8 120 C40 50 200 30 252 70 C230 150 80 186 8 120 Z"/>
+  <path d="M14 118 C80 92 180 70 248 72" fill="none" stroke="#4e6e2c" stroke-width="3"/>
+  <g stroke="#4e6e2c" stroke-width="1.6" fill="none"><path d="M60 104 l-14 -30 M100 94 l-12 -34 M140 86 l-8 -34 M180 78 l-4 -28 M70 102 l10 34 M110 92 l14 38 M150 84 l14 36 M190 78 l14 26"/></g>
+  <!-- otak-otak parcels -->
+  <g filter="url(#r)">
+    <rect x="62" y="78" width="74" height="22" rx="6" fill="#a4bf6a" transform="rotate(-12 99 89)"/>
+    <rect x="70" y="104" width="74" height="22" rx="6" fill="#a4bf6a" transform="rotate(-8 107 115)"/>
+  </g>
+  <g stroke="#6b5a3a" stroke-width="2" opacity=".6"><path d="M84 80 l2 18 M114 74 l2 18 M90 106 l2 18 M124 103 l2 18"/></g>
+  <!-- sambal bowl -->
+  <path filter="url(#r)" fill="#f4f1ea" d="M158 118 C160 150 232 150 234 118 Z"/>
+  <ellipse filter="url(#r)" cx="196" cy="118" rx="38" ry="14" fill="#f4f1ea"/>
+  <ellipse cx="196" cy="118" rx="30" ry="9" fill="#c0392b"/>
+  <path d="M164 130 q32 14 64 0" stroke="#5b8dc7" stroke-width="3" fill="none"/>
+  <!-- chilli + lime -->
+  <path filter="url(#r)" d="M30 158 C60 176 98 170 118 150 C104 172 62 184 30 166 Z" fill="#c0392b"/>
+  <path d="M118 150 q8 -6 6 -14" stroke="#4e6e2c" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle filter="url(#r)" cx="150" cy="172" r="15" fill="#a8c94a"/>
+  <circle cx="150" cy="172" r="9" fill="#d9ea9a"/>
+  <path d="M150 163 v18 M141 172 h18 M144 166 l12 12 M156 166 l-12 12" stroke="#a8c94a" stroke-width="1.4"/>
+</svg>

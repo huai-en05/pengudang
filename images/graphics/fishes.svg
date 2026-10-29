@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160">
+  <defs><filter id="r"><feTurbulence baseFrequency="0.04" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter></defs>
+  <g transform="translate(90 60)">
+    <path filter="url(#r)" fill="#f2c14e" d="M-60 0 C-40 -32 22 -34 44 -8 L70 -28 L62 0 L70 28 L44 8 C22 34 -40 32 -60 0 Z"/>
+    <path d="M-20 -24 C-24 -8 -24 8 -20 24 M0 -28 C-4 -10 -4 10 0 28 M20 -22 C16 -8 16 8 20 22" stroke="#e0837a" stroke-width="6" fill="none"/>
+    <circle cx="-42" cy="-6" r="5" fill="#1d2a3d"/><circle cx="-43" cy="-8" r="1.6" fill="#fff"/>
+  </g>
+  <g transform="translate(170 116) scale(-.7 .7)">
+    <path filter="url(#r)" fill="#e0837a" d="M-60 0 C-40 -32 22 -34 44 -8 L70 -28 L62 0 L70 28 L44 8 C22 34 -40 32 -60 0 Z"/>
+    <path d="M-26 -20 C-12 -26 10 -24 26 -14" stroke="#f9e6ea" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="-42" cy="-6" r="6" fill="#1d2a3d"/>
+  </g>
+  <g fill="none" stroke="#5b8dc7" stroke-width="3"><circle cx="20" cy="30" r="7"/><circle cx="32" cy="12" r="4"/><circle cx="214" cy="60" r="5"/></g>
+</svg>

@@ -5,45 +5,53 @@ Website promoting the home cooking classes run by the women (Ibus) of Pengudang,
 ## Pages
 | Page | File |
 |---|---|
-| Home: intro, classes, Ibus, reviews, booking form | `index.html` |
+| Home: intro, classes, Ibus, reviews | `index.html` |
 | Menu + story behind each dish | `menu.html` (dish pages are `menu.html#otak-otak` etc.) |
-| Cooking classes + booking | `classes.html` |
+| All cooking classes | `classes.html` |
+| One class: full details, availability calendar and booking | `class.html?id=seafood` (`home`, `sweet`) |
 | Map of Pengudang, landmarks, guests' photos | `map.html` |
 | Pengudang Passport (stamps, photos, download) | `passport.html` |
+| Contact form and contact details | `contact.html` |
+| Photo credits | `credits.html` |
 
 Every page has an **EN / ID** switch (top right). The choice is remembered.
 
 ## Editing content
-Almost everything lives in **`js/data.js`**: classes, dishes, Ibus, reviews, landmarks (and their position on the map). Each text has an `en` and `id` version.
+Almost everything lives in **`js/data.js`**: contact details and social links, classes (price, schedule, highlights, itinerary, what's included…), dishes, Ibus, reviews, landmarks (and their position on the map) and photo credits. Each text has an `en` and `id` version.
 Interface text (titles, buttons, form labels) is in **`js/i18n.js`**.
 
-## Still to fill in
-- [ ] **Booking contact**: set `CONTACT.whatsapp` (e.g. `"6281234567890"`) or `CONTACT.email` at the top of `js/data.js`. Until then the form shows "booking isn't connected yet".
-- [ ] Ibu names and bios (`IBUS`)
-- [ ] Class prices (`[Price]`) and confirm durations / dish combinations (`CLASSES`)
-- [ ] Landmarks 2–4: names, descriptions, map positions (`LANDMARKS`)
-- [ ] More reviews (`REVIEWS`; with 2+ they rotate automatically)
-- [ ] Check dish stories with the Ibus. Otak-Otak is from the Canva; the others are general background on each dish, written as drafts.
+### Class schedule & availability
+Each class has a `schedule`: the weekdays it runs (0 = Sunday … 6 = Saturday), its start times and how many guests fit. The class page shows the next few months as a calendar from that schedule, skipping `CLOSED_DATES`. Guests pick the number of people, a date and a time, then press **Reserve now** to confirm their booking in a short checkout step. Questions that aren't bookings go through the form on `contact.html`.
+There is no booking system behind it yet, so "spots left" is a stand-in estimate. Once real bookings are tracked, replace `sessionsFor()` in `js/main.js`.
+
+## Before launch
+- [ ] **Booking contact**: set `CONTACT.whatsapp` (e.g. `"6281234567890"`) or `CONTACT.email` at the top of `js/data.js`. Bookings and contact-form messages are sent there. Until then both say booking isn't connected yet.
+- [ ] **Footer details are samples**: phone, email and social accounts in `CONTACT` / `SOCIALS` are made up. Replace them with the real ones.
+- [ ] Ibu names, bios, prices, ratings, review counts, schedules and reviews are drafts; check them with the Ibus.
+- [ ] Landmarks: Mangrove Forest, Muara Pengudang and Seagrass Beach are drafts; confirm names, text and map positions.
+- [ ] Check dish stories with the Ibus. Otak-Otak is from the Canva; the others are general background on each dish.
 
 ## Photos
-Drop images into `images/` with these names (any missing photo shows a placeholder):
+Most photos are **placeholders from Wikimedia Commons** (credited on `credits.html`, listed in `PHOTO_CREDITS`). To use your own, overwrite the file with the same name and delete its line from `PHOTO_CREDITS`:
 
 ```
-images/ibus/ibu-1.jpg, ibu-2.jpg
-images/reviews/review-1.jpg
 images/dishes/otak-otak.jpg, keropok-amplang.jpg, ikan-bakar.jpg, ayam-goreng.jpg, nasi-uduk.jpg, urap.jpg, kueh-lapis.jpg
 images/classes/seafood.jpg, home-cooking.jpg, kueh-lapis.jpg
-images/landmarks/birds-nest-farm.jpg, landmark-2.jpg, landmark-3.jpg, landmark-4.jpg
+images/landmarks/birds-nest-farm.jpg, mangroves.jpg, river-mouth.jpg, beach.jpg
+images/reviews/review-1.jpg, review-2.jpg, review-3.jpg
 images/guests/guest-1.jpg, guest-2.jpg
 ```
+The Ibus are shown as illustrations. For photos, put them in `images/ibus/` and change `image` in `IBUS`.
 Square photos work best for dishes and Ibus; landscape (4:3) for everything else. Keep each under ~500 KB.
 
 ## Passport
 Stamps and photos are saved only in the visitor's own browser (no server). Visitors collect a stamp per landmark on the map, one for joining a class, and one for adding a photo, then can download their passport as an image to share.
 
 ## Fonts & graphics
-- Fonts (self-hosted, Open Font License): **Allison** (script titles), **Cormorant Garamond** (nav, sub-headings), **Arimo** (body). Closest free matches to the Canva fonts.
-- Fish school, village skyline, island map, globe and placeholder graphics are original SVGs in `images/graphics/`.
+- Fonts (self-hosted, Open Font License): **Dancing Script** for headings, **Lora** for everything else.
+- All drawings in `images/graphics/` are original SVGs: the island map, the fish and village line art (`fish-band.svg`, `village-band.svg`), and the coloured illustrations (Ibus, boat, food, fish, stilt house).
+- The line art is generated by `tools/lineart.py` (`python tools/lineart.py images/graphics`). Colours are written into the SVG files, so the drawings also show when the site is opened straight from disk.
+- Section colours come in shades (cream → pink → rose, sky → blue → navy), set at the top of `css/style.css`.
 
 ## Run locally
 ```
