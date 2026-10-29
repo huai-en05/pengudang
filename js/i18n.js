@@ -2,11 +2,11 @@
    Any element with data-i18n="key" gets its text from here. */
 const STRINGS = {
   en: {
-    "nav.home": "Home Page",
-    "nav.menu": "Menu Introduction",
-    "nav.classes": "Cooking Classes",
-    "nav.map": "Map of Pengudang",
-    "nav.passport": "My Pengudang Passport",
+    "nav.home": "Home",
+    "nav.menu": "Menu",
+    "nav.classes": "Classes",
+    "nav.map": "Map",
+    "nav.passport": "Passport",
 
     "home.title": "From Pengudang,<br>With love",
     "home.welcome": "Welcome to Pengudang!",
@@ -107,7 +107,9 @@ const STRINGS = {
     "avail.legendFew": "Filling up",
     "avail.legendFull": "Sold out or closed",
     "avail.choose": "Choose a date and time first",
-    "nav.contact": "Contact Us",
+    "nav.contact": "Contact",
+    "home.prevReview": "Previous review",
+    "home.nextReview": "Next review",
     "home.ctaTitle": "Ready to cook with us?",
     "home.ctaText": "Pick a class, choose a date and reserve your spot in a minute. Nothing to pay today.",
     "home.ctaBtn": "Browse classes",
@@ -150,15 +152,15 @@ const STRINGS = {
     "footer.credits": "Photo credits",
     "credits.title": "Photo credits",
     "credits.sub": "Until our own photos are ready, some pictures on this site come from Wikimedia Commons. Thank you to these photographers for sharing their work.",
-    "credits.illus": "All drawings, the village map and the fish and village line art are original illustrations made for this site."
+    "credits.illus": "The village map and the coloured drawings are original illustrations made for this site."
   },
 
   id: {
     "nav.home": "Beranda",
-    "nav.menu": "Pengenalan Menu",
-    "nav.classes": "Kelas Memasak",
-    "nav.map": "Peta Pengudang",
-    "nav.passport": "Paspor Pengudang Saya",
+    "nav.menu": "Menu",
+    "nav.classes": "Kelas",
+    "nav.map": "Peta",
+    "nav.passport": "Paspor",
 
     "home.title": "Dari Pengudang,<br>Dengan Cinta",
     "home.welcome": "Selamat Datang di Pengudang!",
@@ -259,7 +261,9 @@ const STRINGS = {
     "avail.legendFew": "Hampir penuh",
     "avail.legendFull": "Penuh atau tutup",
     "avail.choose": "Pilih tanggal dan jam dulu",
-    "nav.contact": "Hubungi Kami",
+    "nav.contact": "Kontak",
+    "home.prevReview": "Ulasan sebelumnya",
+    "home.nextReview": "Ulasan berikutnya",
     "home.ctaTitle": "Siap memasak bersama kami?",
     "home.ctaText": "Pilih kelas, pilih tanggal dan pesan tempat Anda dalam semenit. Tidak perlu bayar hari ini.",
     "home.ctaBtn": "Lihat kelas",
@@ -302,6 +306,6 @@ const STRINGS = {
     "footer.credits": "Kredit foto",
     "credits.title": "Kredit foto",
     "credits.sub": "Sampai foto kami sendiri siap, beberapa gambar di situs ini berasal dari Wikimedia Commons. Terima kasih kepada para fotografer yang telah membagikan karyanya.",
-    "credits.illus": "Semua gambar, peta kampung, serta ilustrasi garis ikan dan kampung adalah ilustrasi asli yang dibuat untuk situs ini."
+    "credits.illus": "Peta kampung dan gambar berwarna adalah ilustrasi asli yang dibuat untuk situs ini."
   }
 };

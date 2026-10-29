@@ -497,5 +497,6 @@ const PHOTO_CREDITS = [
   { file: "images/guests/guest-2.jpg", title: "Bintan north beach.jpg", author: "Seader", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Bintan_north_beach.jpg" },
   { file: "images/reviews/review-1.jpg", title: "Ikan Bakar 3.jpg", author: "S Kartika", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Ikan_Bakar_3.jpg" },
   { file: "images/reviews/review-2.jpg", title: "Otak-otak.JPG", author: "Unknown author", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Otak-otak.JPG" },
-  { file: "images/reviews/review-3.jpg", title: "Bintan Village.jpg", author: "butterbeeee", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Bintan_Village.jpg" }
+  { file: "images/reviews/review-3.jpg", title: "Bintan Village.jpg", author: "butterbeeee", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Bintan_Village.jpg" },
+  { file: "images/graphics/fish-band.png, images/graphics/village-band.png", title: "Line drawings (sea creatures, palms, hut, boats, pelican)", author: "Pearson Scott Foresman", license: "Public domain", url: "https://commons.wikimedia.org/wiki/Category:Pearson_Scott_Foresman_illustrations" }
 ];

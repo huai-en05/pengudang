@@ -59,7 +59,7 @@
       ["passport.html", "nav.passport", "passport"],
       ["contact.html", "nav.contact", "contact"]
     ];
-    header.className = "nav" + (header.dataset.theme === "blue" ? " nav--blue" : "");
+    header.className = "nav";
     header.innerHTML = `
       <a class="nav__brand" href="index.html" aria-label="Home">Pengudang</a>
       <ul class="nav__links">
@@ -106,7 +106,7 @@
   function drawFooter(footer, links) {
     const wa = SOCIALS.find((s) => s.id === "whatsapp");
     footer.innerHTML = `
-      <img class="footer__art" src="images/graphics/village-band.svg" alt="" aria-hidden="true">
+      <img class="footer__art" src="images/graphics/village-band.png" alt="" aria-hidden="true">
       <div class="footer__grid">
         <div class="footer__brand">
           <a class="script" href="index.html">From Pengudang, With love</a>
@@ -245,8 +245,16 @@
             <cite>${esc(r.name)}</cite>
           </div>
         </div>
-        ${REVIEWS.length > 1 ? `<div class="carousel__dots">${REVIEWS.map((_, i) => `<button type="button" aria-label="Review ${i + 1}" aria-pressed="${i === current}" data-i="${i}"></button>`).join("")}</div>` : ""}`;
+        ${REVIEWS.length > 1 ? `
+        <div class="carousel__nav">
+          <button type="button" class="carousel__arrow" data-step="-1" aria-label="${esc(t("home.prevReview"))}">‹</button>
+          <div class="carousel__dots">${REVIEWS.map((_, i) => `<button type="button" aria-label="${i + 1} / ${REVIEWS.length}" aria-pressed="${i === current}" data-i="${i}"></button>`).join("")}</div>
+          <button type="button" class="carousel__arrow" data-step="1" aria-label="${esc(t("home.nextReview"))}">›</button>
+        </div>` : ""}`;
       reviews.querySelectorAll(".carousel__dots button").forEach((b) => b.addEventListener("click", () => { current = +b.dataset.i; drawReview(); }));
+      reviews.querySelectorAll("[data-step]").forEach((b) => b.addEventListener("click", () => {
+        current = (current + +b.dataset.step + REVIEWS.length) % REVIEWS.length; drawReview();
+      }));
     }
     if (REVIEWS.length > 1) setInterval(() => { if (!reviews.matches(":hover")) { current = (current + 1) % REVIEWS.length; drawReview(); } }, 8000);
   }
@@ -455,7 +463,7 @@
         <p class="only-mobile"><a class="btn btn--solid" href="#class-avail">${esc(t("avail.title"))}</a></p>
         <div class="gallery">
           ${img(c.image, L(c.short), "gallery__main")}
-          ${c.dishes.slice(0, 2).map((d) => img(DISHES[d].image, DISHES[d].name)).join("")}
+          ${c.dishes.filter((d) => DISHES[d].image.split("/").pop() !== c.image.split("/").pop()).slice(0, 2).map((d) => img(DISHES[d].image, DISHES[d].name)).join("")}
         </div>
         <p class="lead">${esc(L(c.summary))}</p>
 
@@ -781,7 +789,7 @@
     grad.addColorStop(0, "rgba(0,0,0,0)"); grad.addColorStop(.5, "rgba(0,0,0,.12)"); grad.addColorStop(1, "rgba(0,0,0,0)");
     g.fillStyle = grad; g.fillRect(W / 2 - 40, by, 80, bh);
     // left: name + photos
-    g.textAlign = "left"; g.fillStyle = "#5b5b5b"; g.font = '600 20px "Lora", serif';
+    g.textAlign = "left"; g.fillStyle = "#5b5b5b"; g.font = '600 20px "Josefin Sans", sans-serif';
     g.fillText(t("passport.holder").toUpperCase(), bx + 50, by + 60);
     g.fillStyle = "#366baa"; g.font = '600 64px "Dancing Script", cursive';
     g.fillText(p.name || "—", bx + 50, by + 135);
@@ -799,7 +807,7 @@
     });
     // right: stamps
     const rx = W / 2 + 60;
-    g.fillStyle = "#1d2a3d"; g.font = '600 36px "Lora", serif'; g.fillText(t("passport.stamps"), rx, by + 70);
+    g.fillStyle = "#1d2a3d"; g.font = '600 36px "Josefin Sans", sans-serif'; g.fillText(t("passport.stamps"), rx, by + 70);
     const r = 92, cols = 3, gapX = (bw / 2 - 120) / cols;
     defs.forEach((d, i) => {
       const cx = rx + gapX * (i % cols) + gapX / 2 - 10, cy = by + 210 + Math.floor(i / cols) * 250;
@@ -809,12 +817,12 @@
       g.lineWidth = on ? 5 : 3; if (!on) g.setLineDash([10, 8]);
       g.beginPath(); g.arc(0, 0, r, 0, Math.PI * 2); g.stroke();
       if (on) { g.lineWidth = 2; g.beginPath(); g.arc(0, 0, r - 10, 0, Math.PI * 2); g.stroke(); }
-      g.setLineDash([]); g.textAlign = "center"; g.font = '700 19px "Lora", serif';
+      g.setLineDash([]); g.textAlign = "center"; g.font = '700 19px "Josefin Sans", sans-serif';
       wrapText(g, d.label.toUpperCase(), 0, on ? -6 : 6, r * 1.5, 22);
-      if (on) { g.font = '16px "Lora", serif'; g.fillText(on, 0, 44); }
+      if (on) { g.font = '16px "Josefin Sans", sans-serif'; g.fillText(on, 0, 44); }
       g.restore();
     });
-    g.textAlign = "center"; g.fillStyle = "#366baa"; g.font = '20px "Lora", serif';
+    g.textAlign = "center"; g.fillStyle = "#366baa"; g.font = '20px "Josefin Sans", sans-serif';
     g.fillText("From Pengudang, With love · Bintan, Indonesia", W / 2, H - 28);
     const a = document.createElement("a");
     a.download = "my-pengudang-passport.png";
