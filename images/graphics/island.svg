@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <pattern id="grass" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M5 14 l2 -5 l2 5 M15 6 l2 -5 l2 5" fill="none" stroke="#5f7f36" stroke-width="1.3" stroke-linecap="round"/>
+    </pattern>
+    <filter id="rough"><feTurbulence baseFrequency="0.035" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="14"/></filter>
+  </defs>
+  <!-- shallow water ring -->
+  <path filter="url(#rough)" fill="#5b8dc7" opacity=".55" d="M92 150 C70 90 150 40 228 58 C268 30 330 28 372 60 C420 40 488 64 502 116 C548 140 556 214 520 252 C536 312 488 372 420 360 C380 392 300 396 262 368 C200 384 120 360 108 300 C58 270 52 196 92 150 Z"/>
+  <!-- sand -->
+  <path filter="url(#rough)" fill="#ead9ad" d="M112 158 C94 108 162 66 232 82 C270 56 328 54 366 84 C412 66 470 86 482 130 C522 152 528 214 496 248 C510 302 470 350 414 340 C378 368 306 370 270 346 C212 360 140 340 130 290 C88 264 82 200 112 158 Z"/>
+  <!-- land -->
+  <path filter="url(#rough)" fill="#7fa04d" d="M132 164 C118 122 172 90 234 102 C270 80 324 78 358 104 C402 90 452 106 462 142 C498 162 502 214 474 244 C486 290 452 328 404 320 C372 344 308 346 276 326 C222 338 160 322 150 282 C114 260 108 202 132 164 Z"/>
+  <path filter="url(#rough)" fill="url(#grass)" d="M132 164 C118 122 172 90 234 102 C270 80 324 78 358 104 C402 90 452 106 462 142 C498 162 502 214 474 244 C486 290 452 328 404 320 C372 344 308 346 276 326 C222 338 160 322 150 282 C114 260 108 202 132 164 Z"/>
+  <!-- little river -->
+  <path d="M300 104 C290 150 330 180 310 230 C298 262 330 300 318 330" fill="none" stroke="#5b8dc7" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+  <!-- trees -->
+  <g fill="#4e6e2c">
+    <circle cx="190" cy="140" r="11"/><circle cx="206" cy="132" r="9"/>
+    <circle cx="420" cy="140" r="10"/><circle cx="436" cy="150" r="8"/>
+    <circle cx="200" cy="270" r="10"/><circle cx="420" cy="270" r="11"/><circle cx="404" cy="282" r="8"/>
+    <circle cx="360" cy="220" r="9"/>
+  </g>
+  <!-- waves -->
+  <g fill="none" stroke="#f8e1e6" stroke-width="2" stroke-linecap="round" opacity=".8">
+    <path d="M40 80 q10 -8 20 0 t20 0"/><path d="M520 70 q10 -8 20 0 t20 0"/>
+    <path d="M30 360 q10 -8 20 0 t20 0"/><path d="M540 380 q10 -8 20 0 t20 0"/>
+  </g>
+</svg>

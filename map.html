@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>From Pengudang, With love</title>
+<meta name="description" content="Cook with the women of Pengudang, a fishing village on Bintan island, Indonesia. Cooking classes, village map and stories behind each dish.">
+<link rel="icon" href="images/graphics/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="map" data-title-key="nav.map">
+<header id="nav" data-theme="blue"></header>
+<main>
+  <section class="section section--blue">
+    <div class="wrap">
+      <h1 class="script-title" data-i18n="map.title">Map of Pengudang</h1>
+      <p class="subtitle" data-i18n-html="map.sub"></p>
+      <div class="map-box" id="map-box">
+        <img src="images/graphics/island.svg" alt="Illustrated map of Pengudang">
+      </div>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Pengudang%2C%20Bintan%2C%20Indonesia" target="_blank" rel="noopener" data-i18n="map.openMaps">Open Pengudang in Google Maps</a>
+    </div>
+  </section>
+  <section class="section section--pink">
+    <div class="wrap">
+      <h2 class="script-title" data-i18n="map.landmarks">Our Landmarks</h2>
+      <div id="landmark-list"></div>
+      <h2 class="stamps-title" style="font-size:30px;font-weight:500;margin:10px 0 16px" data-i18n="map.guests">Other guests’ pictures</h2>
+      <div class="guest-grid" id="guest-grid"></div>
+    </div>
+  </section>
+</main>
+<dialog class="modal" id="landmark-modal"></dialog>
+<footer id="footer"></footer>
+<script src="js/i18n.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
